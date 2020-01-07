@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
 int main(){
@@ -7,9 +8,16 @@ int main(){
 	cin >> N;
 	
 	string name[N];
-	int age[N];
-	cout << "Name of student = ";
-	cout << "Age of student = ";
+	int age[N];	
+	int i=0;
+	while(i<N){
+		cout << "Name of student"<<i+1<<" = ";
+		cin>>name[i];
+		cout << "Age of student = ";
+		cin>>age[i];
+		i+=1;
+	}
+	
 	
 	int key;
 	cout << "--------------------------------------\n";
@@ -17,7 +25,15 @@ int main(){
 	cin >> key;
 	cout << "--------------------------------------\n";
 	
-
+	i=0;
+	while (i<N){
+		if (age[i]==key){
+			cout<<name[i] <<endl;
+		}
+		
+		i+=1;	
+		
+	}
 	
 	cout << "--------------------------------------\n";
 	
